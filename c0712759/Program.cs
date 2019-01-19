@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,21 @@ namespace c0712759
             StudentInformation _John = new StudentInformation("John", 2.0, 10);
             StudentInformation _Mark = new StudentInformation("Mark ", 0.2, 3);
             StudentInformation _Steve = new StudentInformation("Steve", 2.9, 16);
-            StudentInformation _cindy = new StudentInformation("cindy", 3.9, 187);
+            StudentInformation _Cindy = new StudentInformation("Cindy", 3.9, 187);
+
+            // Create a collection of StudentInformation Records
+            var StudentList = new List<StudentInformation>();
+            StudentList.Add(_Mary);
+            StudentList.Add(_John);
+            StudentList.Add(_Mark);
+            StudentList.Add(_Steve);
+            StudentList.Add(_Cindy);
+
+            foreach (var student in StudentList)
+            {
+                Console.WriteLine(student.Name);
+            }
+
         }
         class StudentInformation
         {
@@ -30,6 +45,14 @@ namespace c0712759
 
 
 
+            }
+        }
+
+        class StudentList
+        {
+            public void CICS()
+            {
+                
             }
         }
     }
